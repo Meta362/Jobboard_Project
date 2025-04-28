@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobConnect - ស្វែងរកការងារនៅកម្ពុជា</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#F97316',
+                            600: '#EA580C',
+                            700: '#C2410C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+        }
+        .khmer-title {
+            font-family: 'Kantumruy Pro', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Modern Navbar -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo/Brand -->
+        <div class="flex items-center space-x-2">
+          <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+          </svg>
+          <a href="#" class="text-2xl font-bold text-primary-600 khmer-title">ជាងរកការងារ</a>
+        </div>
+  
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors khmer-title">ទំព័រដើម</a>
+          <a href="job.html" class="text-gray-700 hover:text-primary-600 transition-colors khmer-title">ការងារ</a>
+          <a href="company.html" class="text-gray-700 hover:text-primary-600 transition-colors khmer-title">ក្រុមហ៊ុន</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors khmer-title">អំពីយើង</a>
+          
+          <div class="flex space-x-4">
+            <a href="#" class="px-4 py-2 text-primary-600 hover:bg-primary-50 rounded-lg transition-colors khmer-title">ចូល</a>
+            <a href="test1.html" class="px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg hover:shadow-md transition-all khmer-title">ចុះឈ្មោះ</a>
+          </div>
+        </div>
+  
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button type="button" class="text-gray-500 hover:text-primary-600 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile Navigation (hidden by default) -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+        <a href="#" class="block px-3 py-2 text-gray-700 hover:text-primary-600 khmer-title">ទំព័រដើម</a>
+        <a href="#" class="block px-3 py-2 text-gray-700 hover:text-primary-600 khmer-title">ការងារ</a>
+        <a href="#" class="block px-3 py-2 text-gray-700 hover:text-primary-600 khmer-title">ក្រុមហ៊ុន</a>
+        <a href="#" class="block px-3 py-2 text-gray-700 hover:text-primary-600 khmer-title">អំពីយើង</a>
+        <div class="pt-4 border-t border-gray-200">
+          <a href="#" class="block w-full px-4 py-2 text-center text-primary-600 border border-primary-600 rounded-md mb-2 khmer-title">ចូល</a>
+          <a href="test1.html" class="block w-full px-4 py-2 text-center text-white bg-primary-600 rounded-md hover:bg-primary-700 khmer-title">ចុះឈ្មោះ</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    // Mobile menu toggle functionality
+    document.querySelector('button[aria-controls="mobile-menu"]').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+    <!-- Hero Section -->
+    <section class="bg-primary-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 khmer-title">ស្វែងរកការងារល្អនៅកម្ពុជា</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">រកការងារពីក្រុមហ៊ុនឈានមុខនៅកម្ពុជា។ ដាក់ពាក្យភ្លាមៗ</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-2 flex flex-col md:flex-row">
+                <input type="text" placeholder="ឈ្មោះការងារ ឬពាក្យគន្លឹះ" class="flex-grow p-3 rounded border-gray-300 border mb-2 md:mb-0 md:mr-2">
+                <input type="text" placeholder="ទីតាំង" class="flex-grow p-3 rounded border-gray-300 border mb-2 md:mb-0 md:mr-2">
+                <button class="bg-primary-600 text-white p-3 rounded hover:bg-primary-700">ស្វែងរក</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-16 bg-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 khmer-title mb-3">ក្រុមហ៊ុនដែលទុកចិត្តដោយយើង</h2>
+            <p class="text-lg text-gray-600 khmer-title">ចូលរួមជាមួយក្រុមហ៊ុនឈានមុខនៅកម្ពុជា</p>
+            </div>
+
+            <!-- Logo Showcase -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-orange-100 mb-14">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <!-- ABA Bank -->
+                <div class="group relative p-2">
+                <img src="img/aba_bank_logo.jpg" alt="ABA Bank" 
+                    class="h-14 object-contain opacity-80 group-hover:opacity-100 transition duration-300">
+                <div class="absolute inset-x-0 bottom-0 h-1 bg-primary-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                </div>
+                
+                <!-- Smart Axiata -->
+                <div class="group relative p-2">
+                <img src="img/smart.png" alt="Smart Axiata" 
+                    class="h-14 object-contain opacity-80 group-hover:opacity-100 transition duration-300">
+                <div class="absolute inset-x-0 bottom-0 h-1 bg-primary-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                </div>
+                
+                <!-- Cellcard -->
+                <div class="group relative p-2">
+                <img src="img/cellcard.png" alt="Cellcard" 
+                    class="h-14 object-contain opacity-80 group-hover:opacity-100 transition duration-300">
+                <div class="absolute inset-x-0 bottom-0 h-1 bg-primary-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                </div>
+                
+                <!-- PP Bank -->
+                <div class="group relative p-2">
+                <img src="img/ppbank.png" alt="PPBank" 
+                    class="h-14 object-contain opacity-80 group-hover:opacity-100 transition duration-300">
+                <div class="absolute inset-x-0 bottom-0 h-1 bg-primary-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                </div>
+                
+                <!-- Sokha Hotels -->
+                <div class="group relative p-2">
+                <img src="img/sokha.png" alt="Sokha Hotels" 
+                    class="h-14 object-contain opacity-80 group-hover:opacity-100 transition duration-300">
+                <div class="absolute inset-x-0 bottom-0 h-1 bg-primary-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <p class="text-5xl font-bold text-primary-600 mb-2">១០,០០០+</p>
+                <p class="text-gray-600 khmer-title text-lg">ការងារដែលមាន</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <p class="text-5xl font-bold text-primary-600 mb-2">៥,០០០+</p>
+                <p class="text-gray-600 khmer-title text-lg">ក្រុមហ៊ុន</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <p class="text-5xl font-bold text-primary-600 mb-2">១លាន+</p>
+                <p class="text-gray-600 khmer-title text-lg">អ្នកស្វែងរកការងារ</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Jobs -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 khmer-title mb-4 md:mb-0">
+                <span class="border-b-4 border-primary-500 pb-2">ការងារពេញនិយម</span>
+            </h2>
+            <a href="#" class="flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors khmer-title">
+                មើលការងារទាំងអស់
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Job Card 1 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1 border border-gray-100">
+                <div class="p-6">
+                    <div class="flex items-start mb-5">
+                        <div class="bg-primary-50 p-3 rounded-lg mr-4">
+                            <img src="https://via.placeholder.com/40x40?text=ABA" alt="ABA" class="w-10 h-10">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900">អ្នកវិភាគបច្ចេកវិទ្យា</h3>
+                            <p class="text-gray-600 text-sm khmer-title">ABA Bank • ភ្នំពេញ</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-sm khmer-title line-clamp-2">យើងកំពុងស្វែងរកអ្នកវិភាគបច្ចេកវិទ្យាដែលមានបទពិសោធន៍ក្នុងការវិភាគ និងអភិវឌ្ឍប្រព័ន្ធព័ត៌មាន...</p>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-3 sm:space-y-0">
+                        <span class="inline-block bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm font-medium">$៨០០ - $១,២០០</span>
+                        <button class="w-full sm:w-auto text-center bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors khmer-title">
+                            ដាក់ពាក្យឥឡូវ
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Job Card 2 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1 border border-gray-100">
+                <div class="p-6">
+                    <div class="flex items-start mb-5">
+                        <div class="bg-blue-50 p-3 rounded-lg mr-4">
+                            <img src="https://via.placeholder.com/40x40?text=Smart" alt="Smart" class="w-10 h-10">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900">អ្នកគ្រប់គ្រងបណ្តាញ</h3>
+                            <p class="text-gray-600 text-sm khmer-title">Smart Axiata • ភ្នំពេញ</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-sm khmer-title line-clamp-2">គ្រប់គ្រងបណ្តាញទូរគមនាគមន៍របស់ក្រុមហ៊ុន ធានាបណ្តាញដំណើរការដោយរលូន និងមានសុវត្ថិភាព...</p>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-3 sm:space-y-0">
+                        <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">$១,០០០ - $១,៥០០</span>
+                        <button class="w-full sm:w-auto text-center bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors khmer-title">
+                            ដាក់ពាក្យឥឡូវ
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Job Card 3 (Featured) -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1 border-2 border-primary-500 relative">
+                <div class="absolute -top-3 -right-3 bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-full khmer-title">
+                    ពេញនិយម
+                </div>
+                <div class="p-6">
+                    <div class="flex items-start mb-5">
+                        <div class="bg-green-50 p-3 rounded-lg mr-4">
+                            <img src="https://via.placeholder.com/40x40?text=Sokha" alt="Sokha" class="w-10 h-10">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900">អ្នកគ្រប់គ្រងសណ្ឋាគារ</h3>
+                            <p class="text-gray-600 text-sm khmer-title">សណ្ឋាគារសុខា • សៀមរាប</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-sm khmer-title line-clamp-2">គ្រប់គ្រងប្រតិបត្តិការនៃសណ្ឋាគារដែលមានឈ្មោះ ធានាសេវាកម្មល្អបំផុតសម្រាប់អតិថិជន...</p>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-3 sm:space-y-0">
+                        <span class="inline-block bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium">$៦០០ - $៨០០</span>
+                        <button class="w-full sm:w-auto text-center bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors khmer-title">
+                            ដាក់ពាក្យឥឡូវ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Dual CTA -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Job Seeker CTA -->
+                <div class="bg-orange-50 p-8 rounded-lg">
+                    <div class="text-center">
+                        <i class="fas fa-user-tie text-4xl text-primary-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 khmer-title">សម្រាប់អ្នកស្វែងរកការងារ</h3>
+                        <p class="text-gray-600 mb-4 khmer-title">បង្កើតប្រវត្តិរូបដើម្បីរកការងារដែលសមនឹងអ្នក</p>
+                        <ul class="text-left mb-6 space-y-2 khmer-title">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> ផ្ទុកឡើងប្រវត្តិរូបរបស់អ្នក</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> ទទួលការជូនដំណឹងអំពីការងារ</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> តាមដានការដាក់ពាក្យ</li>
+                        </ul>
+                        <button class="bg-primary-600 text-white px-6 py-3 rounded-md hover:bg-primary-700 w-full md:w-auto khmer-title">ចុះឈ្មោះជាអ្នកស្វែងរកការងារ</button>
+                    </div>
+                </div>
+                
+                <!-- Employer CTA -->
+                <div class="bg-amber-50 p-8 rounded-lg">
+                    <div class="text-center">
+                        <i class="fas fa-building text-4xl text-amber-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 khmer-title">សម្រាប់ក្រុមហ៊ុន</h3>
+                        <p class="text-gray-600 mb-4 khmer-title">ប្រកាសការងារ និងរកបេក្ខជនដែលមានសមត្ថភាព</p>
+                        <ul class="text-left mb-6 space-y-2 khmer-title">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> ឈានដល់បេក្ខជន ១លាននាក់+</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> ការតាមដានបេក្ខជន</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> សាកល្បងឥតគិតថ្លៃ ៣០ថ្ងៃ</li>
+                        </ul>
+                        <button class="bg-amber-600 text-white px-6 py-3 rounded-md hover:bg-amber-700 w-full md:w-auto khmer-title">ប្រកាសការងារ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-12 khmer-title">របៀបដំណើរការ</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2 khmer-title">១. ស្វែងរកការងារ</h3>
+                    <p class="text-gray-600 khmer-title">រកការងារដែលត្រូវនឹងជំនាញ និងចំណង់ចំណូលចិត្តរបស់អ្នក</p>
+                </div>
+                
+                <div>
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paper-plane text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2 khmer-title">២. ដាក់ពាក្យយ៉ាងងាយ</h3>
+                    <p class="text-gray-600 khmer-title">ដាក់ពាក្យដោយគ្រាន់តែចុចប៉ុន្មានដង</p>
+                </div>
+                
+                <div>
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-briefcase text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2 khmer-title">៣. ទទួលបានការងារ</h3>
+                    <p class="text-gray-600 khmer-title">ទទួលបានការងារដែលអ្នកសុបិន្ត</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-12 text-center khmer-title">មតិអ្នកប្រើប្រាស់</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=User" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-medium">សុខ សំអាត</h4>
+                            <p class="text-gray-600 khmer-title">អ្នកវិភាគប្រព័ន្ធនៅ ABA Bank</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic khmer-title">"ខ្ញុំបានទទួលការងារដែលខ្ញុំសុបិន្តនៅ ABA Bank ក្នុងរយៈពេល ២សប្តាហ៍បន្ទាប់ពីប្រើជាងរកការងារ។ ដំណើរការដាក់ពាក្យងាយស្រួលណាស់!"</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/60x60?text=User" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-medium">វីរៈ សុភា</h4>
+                            <p class="text-gray-600 khmer-title">អ្នកគ្រប់គ្រង HR នៅ Smart Axiata</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic khmer-title">"យើងបានជ្រើសរើសបុគ្គលិកបានលឿនជាងមុន ៣ដង ចាប់តាំងពីប្រើជាងរកការងារ។ គុណភាពបេក្ខជនល្អឥតខ្ចោះ។"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary-600 text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-semibold mb-4 khmer-title">ទទួលការជូនដំណឹងអំពីការងារតាមអ៊ីមែល</h2>
+            <p class="mb-6 khmer-title">ទទួលបានការងារថ្មីៗដែលត្រូវនឹងប្រវត្តិរូបរបស់អ្នក</p>
+            
+            <div class="flex flex-col sm:flex-row gap-2">
+                <input type="email" placeholder="អាស័យដ្ឋានអ៊ីមែលរបស់អ្នក" class="flex-grow p-3 rounded text-gray-800">
+                <button class="bg-white text-primary-700 px-6 py-3 rounded font-medium hover:bg-gray-100 khmer-title">ជាវ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 khmer-title">ជាងរកការងារ</h3>
+                    <p class="text-gray-400 khmer-title">ភ្ជាប់អ្នកដែលមានជំនាញជាមួយឱកាសការងារចាប់តាំងពីឆ្នាំ២០២៤។</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 khmer-title">សម្រាប់អ្នកស្វែងរកការងារ</h4>
+                    <ul class="space-y-2 khmer-title">
+                        <li><a href="#" class="text-gray-400 hover:text-white">រកការងារ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">បង្កើតប្រវត្តិរូប</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ការជូនដំណឹងអំពីការងារ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 khmer-title">សម្រាប់ក្រុមហ៊ុន</h4>
+                    <ul class="space-y-2 khmer-title">
+                        <li><a href="#" class="text-gray-400 hover:text-white">ប្រកាសការងារ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">រកបេក្ខជន</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">តម្លៃ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4 khmer-title">អំពីយើង</h4>
+                    <ul class="space-y-2 khmer-title">
+                        <li><a href="#" class="text-gray-400 hover:text-white">អំពីពួកយើង</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ទំនាក់ទំនង</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">គោលការណ៍ភាពឯកជន</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0 khmer-title">© ២០២៤ ជាងរកការងារ។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
