@@ -1,2 +1,0 @@
-
-mix ban error jg
